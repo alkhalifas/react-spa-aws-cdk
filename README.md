@@ -1,8 +1,21 @@
-# React + Vite
+# React + Vite (S3 Static Deployment via AWS CDK)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo includes a boilerplate template to deploy a React application
+to AWS S3 as a static application using AWS CDK.
 
-Currently, two official plugins are available:
+Build the App:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    npm install
+    npm run build
+
+Bootstrap Infrastructure:
+
+    cdk bootstrap #only run the first time
+
+Deploy App:
+
+    cdk deploy
+
+Delete the full stack:
+
+    cdk delete
